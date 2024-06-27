@@ -50,7 +50,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await fetch("http://localhost:3000/api/v1/login", {
+      const response = await fetch("https://back-end-bcr-production.up.railway.app/api/v1/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     password: string
   ) => {
     try {
-      const response = await fetch("http://localhost:3000/api/v1/register", {
+      const response = await fetch("https://back-end-bcr-production.up.railway.app/api/v1/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -124,7 +124,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         throw new Error("No token found");
       }
 
-      const response = await fetch("http://localhost:3000/api/v1/whoami", {
+      const response = await fetch("https://back-end-bcr-production.up.railway.app/api/v1/whoami", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -154,7 +154,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         throw new Error("No token found");
       }
 
-      const response = await fetch("http://localhost:3000/api/v1/users", {
+      const response = await fetch("https://back-end-bcr-production.up.railway.app/api/v1/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
