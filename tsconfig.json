@@ -8,7 +8,7 @@
       "forceConsistentCasingInFileNames": true,
       "jsx": "react"
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./jest.setup.ts"],
+    "include": ["src/**/*"],
     "exclude": ["node_modules"]
   }
   

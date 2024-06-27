@@ -224,9 +224,9 @@ const Testimoni: React.FC = () => {
                   <path
                     d="M18.5 21L13.5 16L18.5 11"
                     stroke="#222222"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   />
                 </svg>
               </button>
@@ -242,9 +242,9 @@ const Testimoni: React.FC = () => {
                   <path
                     d="M13.5 21L18.5 16L13.5 11"
                     stroke="#151515"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   />
                 </svg>
               </button>
