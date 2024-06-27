@@ -63,9 +63,9 @@ const AddNewCar: React.FC = () => {
               <path
                 d="M6 12L10 8L6 4"
                 stroke="#222222"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>
@@ -81,9 +81,9 @@ const AddNewCar: React.FC = () => {
               <path
                 d="M6 12L10 8L6 4"
                 stroke="#222222"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

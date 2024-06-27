@@ -32,9 +32,9 @@ const OurService: React.FC = () => {
                   <path
                     d="M17.3333 8L9.99996 15.3333L6.66663 12"
                     stroke="#0D28A6"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <p className="paragraph-font">
@@ -53,9 +53,9 @@ const OurService: React.FC = () => {
                   <path
                     d="M17.3333 8L9.99996 15.3333L6.66663 12"
                     stroke="#0D28A6"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <p className="paragraph-font">
@@ -74,9 +74,9 @@ const OurService: React.FC = () => {
                   <path
                     d="M17.3333 8L9.99996 15.3333L6.66663 12"
                     stroke="#0D28A6"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <p className="paragraph-font">
@@ -95,9 +95,9 @@ const OurService: React.FC = () => {
                   <path
                     d="M17.3333 8L9.99996 15.3333L6.66663 12"
                     stroke="#0D28A6"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <p className="paragraph-font">
@@ -116,9 +116,9 @@ const OurService: React.FC = () => {
                   <path
                     d="M17.3333 8L9.99996 15.3333L6.66663 12"
                     stroke="#0D28A6"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 <p className="paragraph-font">

@@ -13,8 +13,6 @@ export default [
   ...fixupConfigRules(pluginReactConfig),
   {
     rules: {
-      'react/no-unknown-property': 'off',
-      'react/no-unescaped-entities':'off'
     },
   },
 ];

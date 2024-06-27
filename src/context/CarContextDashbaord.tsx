@@ -53,7 +53,7 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
 
   const fetchCars = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/cars");
+      const response = await fetch("https://back-end-bcr-production.up.railway.app/api/cars");
       if (!response.ok) {
         throw new Error("Failed to fetch cars");
       }
@@ -77,7 +77,7 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
     const token = localStorage.getItem("token");
     console.log(token);
 
-    const response = await fetch("http://localhost:3000/api/cars", {
+    const response = await fetch("https://back-end-bcr-production.up.railway.app/api/cars", {
       method: "POST",
       body: formData,
       headers: {
@@ -101,7 +101,7 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
         throw new Error("Token is missing");
       }
 
-      const response = await fetch(`http://localhost:3000/api/cars/${carId}`, {
+      const response = await fetch(`https://back-end-bcr-production.up.railway.app/api/cars/${carId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -133,7 +133,7 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
 
       const token = localStorage.getItem("token");
 
-      const response = await fetch(`http://localhost:3000/api/cars/${carId}`, {
+      const response = await fetch(`https://back-end-bcr-production.up.railway.app/api/cars/${carId}`, {
         method: "PUT",
         body: formData,
         headers: {
