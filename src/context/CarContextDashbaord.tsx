@@ -53,7 +53,9 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
 
   const fetchCars = async () => {
     try {
-      const response = await fetch("https://back-end-bcr-production.up.railway.app/api/cars");
+      const response = await fetch(
+        "https://back-end-bcr-production.up.railway.app/api/cars"
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch cars");
       }
@@ -64,26 +66,26 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
     }
   };
 
-  const addCar = async (car: NewCar) => {
+  const addCar = async (car: NewCar, pictureFile: File) => {
     const formData = new FormData();
     formData.append("name", car.name);
     formData.append("price", car.price);
     formData.append("start_rent", car.start_rent.toISOString());
     formData.append("finish_rent", car.finish_rent.toISOString());
-    if (car.picture) {
-      formData.append("picture", car.picture);
-    }
+    formData.append("picture", pictureFile);
 
     const token = localStorage.getItem("token");
-    console.log(token);
 
-    const response = await fetch("https://back-end-bcr-production.up.railway.app/api/cars", {
-      method: "POST",
-      body: formData,
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const response = await fetch(
+      "https://back-end-bcr-production.up.railway.app/api/cars",
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
     if (response.ok) {
       const newCar = await response.json();
@@ -101,12 +103,15 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
         throw new Error("Token is missing");
       }
 
-      const response = await fetch(`https://back-end-bcr-production.up.railway.app/api/cars/${carId}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://back-end-bcr-production.up.railway.app/api/cars/${carId}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to delete car");
@@ -133,13 +138,16 @@ const CarDashboardContextProvider: React.FC<{ children: ReactNode }> = ({
 
       const token = localStorage.getItem("token");
 
-      const response = await fetch(`https://back-end-bcr-production.up.railway.app/api/cars/${carId}`, {
-        method: "PUT",
-        body: formData,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://back-end-bcr-production.up.railway.app/api/cars/${carId}`,
+        {
+          method: "PUT",
+          body: formData,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (response.ok) {
         const updatedCar = await response.json();

@@ -61,7 +61,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
-        const userData = await checkAuthenticated(); // Setelah login berhasil, periksa autentikasi ulang dan dapatkan data pengguna
+        const userData = await checkAuthenticated(); 
 
         // Navigasi berdasarkan role setelah mendapatkan data pengguna
         if (userData?.role === "superadmin" || userData?.role === "admin") {
@@ -96,10 +96,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       });
 
       if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem("token", data.token);
-        await checkAuthenticated(); // Setelah registrasi berhasil, periksa autentikasi ulang dan dapatkan data pengguna
-        setIsAuthenticated(true);
+        await response.json();
       } else {
         const errorData = await response.json();
         throw new Error(errorData.message || "Registration failed");

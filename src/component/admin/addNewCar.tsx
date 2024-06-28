@@ -7,9 +7,9 @@ const AddNewCar: React.FC = () => {
 
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
+  const [picture, setPicture] = useState<File | null>(null);
   const [startRent, setStartRent] = useState(new Date());
   const [finishRent, setFinishRent] = useState(new Date());
-  const [picture, setPicture] = useState<File | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,9 +22,9 @@ const AddNewCar: React.FC = () => {
     const newCar = {
       name,
       price,
+      picture: null,  // We will handle the file separately
       start_rent: startRent,
       finish_rent: finishRent,
-      picture: null,
     };
 
     try {
@@ -32,19 +32,19 @@ const AddNewCar: React.FC = () => {
       alert('Car added successfully');
       setName('');
       setPrice('');
+      setPicture(null);
       setStartRent(new Date());
       setFinishRent(new Date());
-      setPicture(null);
     } catch (error) {
       console.error('Error adding car:', error);
       alert('Failed to add car');
     }
   };
-  
+
   return (
     <>
       <div className="d-flex flex-column col-9">
-        <Header/>
+        <Header />
         <div
           className="d-flex flex-row"
           style={{ marginLeft: "24px", marginTop: "32px" }}

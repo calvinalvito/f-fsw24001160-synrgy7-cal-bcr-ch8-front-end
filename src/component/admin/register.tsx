@@ -12,7 +12,7 @@ const Register: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await register(email, username, password);
+      await register(username, email, password); // ubah urutan parameter
       setMessage("Registration Successful");
       window.location.href = "/login";
     } catch (error) {
