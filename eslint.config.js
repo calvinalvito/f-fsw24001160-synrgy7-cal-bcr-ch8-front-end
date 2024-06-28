@@ -14,7 +14,14 @@ export default [
   {
     rules: {
       'react/no-unknown-property': 'off',
-      'react/no-unescaped-entities':'off'
+      'react/no-unescaped-entities': 'off'
     },
   },
+  {
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
+  }
 ];
